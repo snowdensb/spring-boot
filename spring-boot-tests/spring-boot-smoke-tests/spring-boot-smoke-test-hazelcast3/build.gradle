@@ -7,7 +7,7 @@ description = "Spring Boot Hazelcast 3 smoke test"
 
 configurations.all {
 	resolutionStrategy {
-		force "com.hazelcast:hazelcast:3.12.8"
+		force "com.hazelcast:hazelcast:3.12.11"
 		force "com.hazelcast:hazelcast-spring:3.12.8"
 	}
 }
