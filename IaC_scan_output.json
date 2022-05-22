@@ -1,0 +1,2108 @@
+{
+    "check_type": "dockerfile",
+    "results": {
+        "passed_checks": [
+            {
+                "check_id": "CKV_DOCKER_7",
+                "bc_check_id": "BC_DKR_7",
+                "check_name": "Ensure the base image uses a non latest version tag",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:trusty-20160914\n"
+                    ],
+                    [
+                        2,
+                        "RUN apt-get update && \\\n"
+                    ],
+                    [
+                        3,
+                        "    apt-get install -y software-properties-common curl && \\\n"
+                    ],
+                    [
+                        4,
+                        "    mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        6,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        7,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        8,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "file_line_range": [
+                    1,
+                    8
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.ReferenceLatestTag",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-base-image-uses-a-non-latest-version-tag"
+            },
+            {
+                "check_id": "CKV_DOCKER_5",
+                "bc_check_id": "BC_DKR_4",
+                "check_name": "Ensure update instructions are not use alone in the Dockerfile",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:trusty-20160914\n"
+                    ],
+                    [
+                        2,
+                        "RUN apt-get update && \\\n"
+                    ],
+                    [
+                        3,
+                        "    apt-get install -y software-properties-common curl && \\\n"
+                    ],
+                    [
+                        4,
+                        "    mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        6,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        7,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        8,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "file_line_range": [
+                    1,
+                    8
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UpdateNotAlone",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-update-instructions-are-not-used-alone-in-the-dockerfile"
+            },
+            {
+                "check_id": "CKV_DOCKER_7",
+                "bc_check_id": "BC_DKR_7",
+                "check_name": "Ensure the base image uses a non latest version tag",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:xenial-20160914\n"
+                    ],
+                    [
+                        2,
+                        "RUN apt-get update && \\\n"
+                    ],
+                    [
+                        3,
+                        "    apt-get install -y software-properties-common curl && \\\n"
+                    ],
+                    [
+                        4,
+                        "    mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        6,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        7,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        8,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "file_line_range": [
+                    1,
+                    8
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.ReferenceLatestTag",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-base-image-uses-a-non-latest-version-tag"
+            },
+            {
+                "check_id": "CKV_DOCKER_5",
+                "bc_check_id": "BC_DKR_4",
+                "check_name": "Ensure update instructions are not use alone in the Dockerfile",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:xenial-20160914\n"
+                    ],
+                    [
+                        2,
+                        "RUN apt-get update && \\\n"
+                    ],
+                    [
+                        3,
+                        "    apt-get install -y software-properties-common curl && \\\n"
+                    ],
+                    [
+                        4,
+                        "    mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        6,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        7,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        8,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "file_line_range": [
+                    1,
+                    8
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UpdateNotAlone",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-update-instructions-are-not-used-alone-in-the-dockerfile"
+            },
+            {
+                "check_id": "CKV_DOCKER_7",
+                "bc_check_id": "BC_DKR_7",
+                "check_name": "Ensure the base image uses a non latest version tag",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "# CentOS 7.9 from 18/11/2020\n"
+                    ],
+                    [
+                        2,
+                        "FROM centos@sha256:e4ca2ed0202e76be184e75fb26d14bf974193579039d5573fb2348664deef76e\n"
+                    ],
+                    [
+                        3,
+                        "RUN mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        4,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        6,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        7,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "file_line_range": [
+                    1,
+                    7
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.ReferenceLatestTag",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-base-image-uses-a-non-latest-version-tag"
+            },
+            {
+                "check_id": "CKV_DOCKER_5",
+                "bc_check_id": "BC_DKR_4",
+                "check_name": "Ensure update instructions are not use alone in the Dockerfile",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "# CentOS 7.9 from 18/11/2020\n"
+                    ],
+                    [
+                        2,
+                        "FROM centos@sha256:e4ca2ed0202e76be184e75fb26d14bf974193579039d5573fb2348664deef76e\n"
+                    ],
+                    [
+                        3,
+                        "RUN mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        4,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        6,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        7,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "file_line_range": [
+                    1,
+                    7
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UpdateNotAlone",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-update-instructions-are-not-used-alone-in-the-dockerfile"
+            },
+            {
+                "check_id": "CKV_DOCKER_7",
+                "bc_check_id": "BC_DKR_7",
+                "check_name": "Ensure the base image uses a non latest version tag",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8 java16\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk16/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk16/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.ReferenceLatestTag",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-base-image-uses-a-non-latest-version-tag"
+            },
+            {
+                "check_id": "CKV_DOCKER_5",
+                "bc_check_id": "BC_DKR_4",
+                "check_name": "Ensure update instructions are not use alone in the Dockerfile",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8 java16\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk16/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk16/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UpdateNotAlone",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-update-instructions-are-not-used-alone-in-the-dockerfile"
+            },
+            {
+                "check_id": "CKV_DOCKER_7",
+                "bc_check_id": "BC_DKR_7",
+                "check_name": "Ensure the base image uses a non latest version tag",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ADD build-release-scripts.sh /build-release-scripts.sh\n"
+                    ],
+                    [
+                        13,
+                        "ADD releasescripts /release-scripts\n"
+                    ],
+                    [
+                        14,
+                        "RUN ./build-release-scripts.sh\n"
+                    ],
+                    [
+                        15,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image/Dockerfile",
+                "file_line_range": [
+                    1,
+                    15
+                ],
+                "resource": "/ci/images/ci-image/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.ReferenceLatestTag",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-base-image-uses-a-non-latest-version-tag"
+            },
+            {
+                "check_id": "CKV_DOCKER_5",
+                "bc_check_id": "BC_DKR_4",
+                "check_name": "Ensure update instructions are not use alone in the Dockerfile",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ADD build-release-scripts.sh /build-release-scripts.sh\n"
+                    ],
+                    [
+                        13,
+                        "ADD releasescripts /release-scripts\n"
+                    ],
+                    [
+                        14,
+                        "RUN ./build-release-scripts.sh\n"
+                    ],
+                    [
+                        15,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image/Dockerfile",
+                "file_line_range": [
+                    1,
+                    15
+                ],
+                "resource": "/ci/images/ci-image/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UpdateNotAlone",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-update-instructions-are-not-used-alone-in-the-dockerfile"
+            },
+            {
+                "check_id": "CKV_DOCKER_7",
+                "bc_check_id": "BC_DKR_7",
+                "check_name": "Ensure the base image uses a non latest version tag",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8 java17\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk17/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk17/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.ReferenceLatestTag",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-base-image-uses-a-non-latest-version-tag"
+            },
+            {
+                "check_id": "CKV_DOCKER_5",
+                "bc_check_id": "BC_DKR_4",
+                "check_name": "Ensure update instructions are not use alone in the Dockerfile",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8 java17\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk17/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk17/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UpdateNotAlone",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-update-instructions-are-not-used-alone-in-the-dockerfile"
+            },
+            {
+                "check_id": "CKV_DOCKER_7",
+                "bc_check_id": "BC_DKR_7",
+                "check_name": "Ensure the base image uses a non latest version tag",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java11\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk11/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk11/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.ReferenceLatestTag",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-the-base-image-uses-a-non-latest-version-tag"
+            },
+            {
+                "check_id": "CKV_DOCKER_5",
+                "bc_check_id": "BC_DKR_4",
+                "check_name": "Ensure update instructions are not use alone in the Dockerfile",
+                "check_result": {
+                    "result": "PASSED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java11\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk11/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk11/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UpdateNotAlone",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-update-instructions-are-not-used-alone-in-the-dockerfile"
+            }
+        ],
+        "failed_checks": [
+            {
+                "check_id": "CKV_DOCKER_2",
+                "bc_check_id": "BC_DKR_2",
+                "check_name": "Ensure that HEALTHCHECK instructions have been added to container images",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:trusty-20160914\n"
+                    ],
+                    [
+                        2,
+                        "RUN apt-get update && \\\n"
+                    ],
+                    [
+                        3,
+                        "    apt-get install -y software-properties-common curl && \\\n"
+                    ],
+                    [
+                        4,
+                        "    mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        6,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        7,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        8,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "file_line_range": [
+                    1,
+                    8
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-healthcheck-instructions-have-been-added-to-container-images"
+            },
+            {
+                "check_id": "CKV_DOCKER_3",
+                "bc_check_id": "BC_DKR_3",
+                "check_name": "Ensure that a user for the container has been created",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:trusty-20160914\n"
+                    ],
+                    [
+                        2,
+                        "RUN apt-get update && \\\n"
+                    ],
+                    [
+                        3,
+                        "    apt-get install -y software-properties-common curl && \\\n"
+                    ],
+                    [
+                        4,
+                        "    mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        6,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        7,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        8,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile",
+                "file_line_range": [
+                    1,
+                    8
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/trusty-20160914/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UserExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-a-user-for-the-container-has-been-created"
+            },
+            {
+                "check_id": "CKV_DOCKER_2",
+                "bc_check_id": "BC_DKR_2",
+                "check_name": "Ensure that HEALTHCHECK instructions have been added to container images",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:xenial-20160914\n"
+                    ],
+                    [
+                        2,
+                        "RUN apt-get update && \\\n"
+                    ],
+                    [
+                        3,
+                        "    apt-get install -y software-properties-common curl && \\\n"
+                    ],
+                    [
+                        4,
+                        "    mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        6,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        7,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        8,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "file_line_range": [
+                    1,
+                    8
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-healthcheck-instructions-have-been-added-to-container-images"
+            },
+            {
+                "check_id": "CKV_DOCKER_3",
+                "bc_check_id": "BC_DKR_3",
+                "check_name": "Ensure that a user for the container has been created",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:xenial-20160914\n"
+                    ],
+                    [
+                        2,
+                        "RUN apt-get update && \\\n"
+                    ],
+                    [
+                        3,
+                        "    apt-get install -y software-properties-common curl && \\\n"
+                    ],
+                    [
+                        4,
+                        "    mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        6,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        7,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        8,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile",
+                "file_line_range": [
+                    1,
+                    8
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/Ubuntu/xenial-20160914/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UserExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-a-user-for-the-container-has-been-created"
+            },
+            {
+                "check_id": "CKV_DOCKER_2",
+                "bc_check_id": "BC_DKR_2",
+                "check_name": "Ensure that HEALTHCHECK instructions have been added to container images",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "# CentOS 7.9 from 18/11/2020\n"
+                    ],
+                    [
+                        2,
+                        "FROM centos@sha256:e4ca2ed0202e76be184e75fb26d14bf974193579039d5573fb2348664deef76e\n"
+                    ],
+                    [
+                        3,
+                        "RUN mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        4,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        6,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        7,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "file_line_range": [
+                    1,
+                    7
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-healthcheck-instructions-have-been-added-to-container-images"
+            },
+            {
+                "check_id": "CKV_DOCKER_3",
+                "bc_check_id": "BC_DKR_3",
+                "check_name": "Ensure that a user for the container has been created",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "# CentOS 7.9 from 18/11/2020\n"
+                    ],
+                    [
+                        2,
+                        "FROM centos@sha256:e4ca2ed0202e76be184e75fb26d14bf974193579039d5573fb2348664deef76e\n"
+                    ],
+                    [
+                        3,
+                        "RUN mkdir -p /opt/openjdk && \\\n"
+                    ],
+                    [
+                        4,
+                        "    cd /opt/openjdk && \\\n"
+                    ],
+                    [
+                        5,
+                        "    curl -L https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz | tar zx --strip-components=1\n"
+                    ],
+                    [
+                        6,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        7,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ]
+                ],
+                "file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "repo_file_path": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile",
+                "file_line_range": [
+                    1,
+                    7
+                ],
+                "resource": "/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/src/intTest/resources/conf/CentOS/7.9-e4ca2ed0/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UserExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-a-user-for-the-container-has-been-created"
+            },
+            {
+                "check_id": "CKV_DOCKER_4",
+                "bc_check_id": "BC_DKR_5",
+                "check_name": "Ensure that COPY is used instead of ADD in Dockerfiles",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": {
+                        "instruction": "ADD",
+                        "startline": 2,
+                        "endline": 2,
+                        "content": "ADD setup.sh /setup.sh\n",
+                        "value": "setup.sh /setup.sh"
+                    }
+                },
+                "code_block": [
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk16/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_line_range": [
+                    3,
+                    3
+                ],
+                "resource": "/ci/images/ci-image-jdk16/Dockerfile.ADD",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.AddExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-copy-is-used-instead-of-add-in-dockerfiles"
+            },
+            {
+                "check_id": "CKV_DOCKER_2",
+                "bc_check_id": "BC_DKR_2",
+                "check_name": "Ensure that HEALTHCHECK instructions have been added to container images",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8 java16\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk16/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk16/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-healthcheck-instructions-have-been-added-to-container-images"
+            },
+            {
+                "check_id": "CKV_DOCKER_3",
+                "bc_check_id": "BC_DKR_3",
+                "check_name": "Ensure that a user for the container has been created",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8 java16\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk16/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk16/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk16/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UserExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-a-user-for-the-container-has-been-created"
+            },
+            {
+                "check_id": "CKV_DOCKER_4",
+                "bc_check_id": "BC_DKR_5",
+                "check_name": "Ensure that COPY is used instead of ADD in Dockerfiles",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": {
+                        "instruction": "ADD",
+                        "startline": 2,
+                        "endline": 2,
+                        "content": "ADD setup.sh /setup.sh\n",
+                        "value": "setup.sh /setup.sh"
+                    }
+                },
+                "code_block": [
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image/Dockerfile",
+                "file_line_range": [
+                    3,
+                    3
+                ],
+                "resource": "/ci/images/ci-image/Dockerfile.ADD",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.AddExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-copy-is-used-instead-of-add-in-dockerfiles"
+            },
+            {
+                "check_id": "CKV_DOCKER_2",
+                "bc_check_id": "BC_DKR_2",
+                "check_name": "Ensure that HEALTHCHECK instructions have been added to container images",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ADD build-release-scripts.sh /build-release-scripts.sh\n"
+                    ],
+                    [
+                        13,
+                        "ADD releasescripts /release-scripts\n"
+                    ],
+                    [
+                        14,
+                        "RUN ./build-release-scripts.sh\n"
+                    ],
+                    [
+                        15,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image/Dockerfile",
+                "file_line_range": [
+                    1,
+                    15
+                ],
+                "resource": "/ci/images/ci-image/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-healthcheck-instructions-have-been-added-to-container-images"
+            },
+            {
+                "check_id": "CKV_DOCKER_3",
+                "bc_check_id": "BC_DKR_3",
+                "check_name": "Ensure that a user for the container has been created",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ADD build-release-scripts.sh /build-release-scripts.sh\n"
+                    ],
+                    [
+                        13,
+                        "ADD releasescripts /release-scripts\n"
+                    ],
+                    [
+                        14,
+                        "RUN ./build-release-scripts.sh\n"
+                    ],
+                    [
+                        15,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image/Dockerfile",
+                "file_line_range": [
+                    1,
+                    15
+                ],
+                "resource": "/ci/images/ci-image/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UserExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-a-user-for-the-container-has-been-created"
+            },
+            {
+                "check_id": "CKV_DOCKER_4",
+                "bc_check_id": "BC_DKR_5",
+                "check_name": "Ensure that COPY is used instead of ADD in Dockerfiles",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": {
+                        "instruction": "ADD",
+                        "startline": 2,
+                        "endline": 2,
+                        "content": "ADD setup.sh /setup.sh\n",
+                        "value": "setup.sh /setup.sh"
+                    }
+                },
+                "code_block": [
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk17/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_line_range": [
+                    3,
+                    3
+                ],
+                "resource": "/ci/images/ci-image-jdk17/Dockerfile.ADD",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.AddExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-copy-is-used-instead-of-add-in-dockerfiles"
+            },
+            {
+                "check_id": "CKV_DOCKER_2",
+                "bc_check_id": "BC_DKR_2",
+                "check_name": "Ensure that HEALTHCHECK instructions have been added to container images",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8 java17\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk17/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk17/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-healthcheck-instructions-have-been-added-to-container-images"
+            },
+            {
+                "check_id": "CKV_DOCKER_3",
+                "bc_check_id": "BC_DKR_3",
+                "check_name": "Ensure that a user for the container has been created",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java8 java17\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk17/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk17/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk17/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UserExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-a-user-for-the-container-has-been-created"
+            },
+            {
+                "check_id": "CKV_DOCKER_4",
+                "bc_check_id": "BC_DKR_5",
+                "check_name": "Ensure that COPY is used instead of ADD in Dockerfiles",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": {
+                        "instruction": "ADD",
+                        "startline": 2,
+                        "endline": 2,
+                        "content": "ADD setup.sh /setup.sh\n",
+                        "value": "setup.sh /setup.sh"
+                    }
+                },
+                "code_block": [
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk11/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_line_range": [
+                    3,
+                    3
+                ],
+                "resource": "/ci/images/ci-image-jdk11/Dockerfile.ADD",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.AddExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-copy-is-used-instead-of-add-in-dockerfiles"
+            },
+            {
+                "check_id": "CKV_DOCKER_2",
+                "bc_check_id": "BC_DKR_2",
+                "check_name": "Ensure that HEALTHCHECK instructions have been added to container images",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java11\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk11/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk11/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-healthcheck-instructions-have-been-added-to-container-images"
+            },
+            {
+                "check_id": "CKV_DOCKER_3",
+                "bc_check_id": "BC_DKR_3",
+                "check_name": "Ensure that a user for the container has been created",
+                "check_result": {
+                    "result": "FAILED",
+                    "results_configuration": null
+                },
+                "code_block": [
+                    [
+                        1,
+                        "FROM ubuntu:focal-20210723\n"
+                    ],
+                    [
+                        2,
+                        "\n"
+                    ],
+                    [
+                        3,
+                        "ADD setup.sh /setup.sh\n"
+                    ],
+                    [
+                        4,
+                        "ADD get-jdk-url.sh /get-jdk-url.sh\n"
+                    ],
+                    [
+                        5,
+                        "ADD get-docker-url.sh /get-docker-url.sh\n"
+                    ],
+                    [
+                        6,
+                        "RUN ./setup.sh java11\n"
+                    ],
+                    [
+                        7,
+                        "\n"
+                    ],
+                    [
+                        8,
+                        "ENV JAVA_HOME /opt/openjdk\n"
+                    ],
+                    [
+                        9,
+                        "ENV PATH $JAVA_HOME/bin:$PATH\n"
+                    ],
+                    [
+                        10,
+                        "ADD docker-lib.sh /docker-lib.sh\n"
+                    ],
+                    [
+                        11,
+                        "\n"
+                    ],
+                    [
+                        12,
+                        "ENTRYPOINT [ \"switch\", \"shell=/bin/bash\", \"--\", \"codep\", \"/bin/docker daemon\" ]\n"
+                    ]
+                ],
+                "file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_abs_path": "/tmp/ws-scm/spring-boot/ci/images/ci-image-jdk11/Dockerfile",
+                "repo_file_path": "/ci/images/ci-image-jdk11/Dockerfile",
+                "file_line_range": [
+                    1,
+                    12
+                ],
+                "resource": "/ci/images/ci-image-jdk11/Dockerfile.",
+                "evaluations": null,
+                "check_class": "checkov.dockerfile.checks.UserExists",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "guideline": "https://docs.bridgecrew.io/docs/ensure-that-a-user-for-the-container-has-been-created"
+            }
+        ],
+        "skipped_checks": [],
+        "parsing_errors": []
+    },
+    "summary": {
+        "passed": 14,
+        "failed": 18,
+        "skipped": 0,
+        "parsing_errors": 0,
+        "resource_count": 7,
+        "checkov_version": "2.0.707"
+    },
+    "url": "Add an api key '--bc-api-key <api-key>' to see more detailed insights via https://bridgecrew.cloud"
+}
